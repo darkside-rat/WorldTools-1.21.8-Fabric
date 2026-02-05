@@ -1,16 +1,16 @@
-architectury { common("fabric", "forge") }
+architectury { common("fabric") }
 
 loom {
     accessWidenerPath.set(File("src/main/resources/worldtools.accesswidener"))
 }
 
 repositories {
-    maven("https://maven.fabricmc.net/") {
-        name = "Fabric"
-    }
-    maven("https://jitpack.io")
+    maven("https://maven.fabricmc.net/")
+    maven("https://maven.terraformersmc.com/releases/")
+    maven("https://maven.shedaniel.me/")
     mavenCentral()
     mavenLocal()
+    maven("https://jitpack.io")
 }
 
 dependencies {
@@ -23,9 +23,5 @@ dependencies {
     modCompileOnly("me.shedaniel.cloth:cloth-config-fabric:${project.properties["cloth_config_version"]}") {
         exclude(group = "net.fabricmc.fabric-api", module = "fabric-api")
     }
-}
-
-tasks.named("remapJar") {
-    enabled = false
 }
 

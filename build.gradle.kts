@@ -2,7 +2,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import net.fabricmc.loom.task.RemapJarTask
 
 plugins {
-    kotlin("jvm") version ("2.1.0")
+    kotlin("jvm") version ("2.3.0")
     id("architectury-plugin") version "3.4-SNAPSHOT"
     id("dev.architectury.loom") version "1.10-SNAPSHOT" apply false
     id("com.github.johnrengelman.shadow") version "8.1.1" apply false
@@ -63,18 +63,17 @@ allprojects {
     version = project.properties["mod_version"]!!
 
     repositories {
-        maven("https://api.modrinth.com/maven")
-        maven("https://jitpack.io")
-        maven("https://server.bbkr.space/artifactory/libs-release") {
-            name = "CottonMC"
-        }
-        maven("https://maven.shedaniel.me/")
+        maven("https://maven.fabricmc.net/")
         maven("https://maven.terraformersmc.com/releases/")
+        maven("https://maven.shedaniel.me/")
+        mavenCentral()
+        mavenLocal()
+        maven("https://jitpack.io")
     }
 
-    tasks {
-        compileKotlin {
-            kotlinOptions.jvmTarget = "21"
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_21)
         }
     }
 
