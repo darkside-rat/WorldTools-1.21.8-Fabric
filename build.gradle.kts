@@ -3,6 +3,8 @@ import org.gradle.api.plugins.JavaPluginExtension
 plugins {
     id("architectury-plugin") version "3.4.162"
     id("dev.architectury.loom") version "1.10.455" apply false
+    id("fabric-loom") apply false
+    kotlin("jvm") apply false
 }
 
 architectury {
