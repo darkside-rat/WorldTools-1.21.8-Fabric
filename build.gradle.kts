@@ -1,10 +1,10 @@
 import org.gradle.api.plugins.JavaPluginExtension
 
 plugins {
-    id("architectury-plugin") version "3.4.162"
+    id("architectury-plugin") version "3.4.162" apply false
     id("dev.architectury.loom") version "1.10.455" apply false
-    id("fabric-loom") apply false
-    kotlin("jvm") apply false
+    id("net.fabricmc.loom") version "1.10.455" apply false
+    kotlin("jvm") version "2.0.21" apply false
 }
 
 architectury {
