@@ -1,5 +1,5 @@
 plugins {
-    id("fabric-loom") version "1.10.455"
+    id("dev.architectury.loom")
     kotlin("jvm") version "2.3.10"
 }
 
