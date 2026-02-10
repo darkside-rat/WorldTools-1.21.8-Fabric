@@ -14,8 +14,8 @@ dependencies {
     minecraft("com.mojang:minecraft:${rootProject.property("minecraft_version")}")
     mappings("net.fabricmc:yarn:${rootProject.property("yarn_mappings")}:v2")
 
-    modImplementation("net.fabricmc:fabric-loader:${rootProject.property("loader_version")}")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${rootProject.property("fabric_version")}")
+    modImplementation("net.fabricmc:fabric-loader:${rootProject.property("fabric_loader_version")}")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${rootProject.property("fabric_api_version")}")
     
     implementation(kotlin("stdlib"))
 }
