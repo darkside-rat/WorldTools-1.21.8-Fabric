@@ -15,8 +15,8 @@ architectury {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:1.21.8")
-    mappings("net.fabricmc:yarn:1.21.4+build.1:v2")
+    minecraft("com.mojang:minecraft:${property("minecraft_version")}")
+    mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
     modImplementation("net.fabricmc:fabric-loader:0.16.9")
     modImplementation("net.fabricmc:fabric-language-kotlin:1.13.9+kotlin.2.3.10")
     implementation(project(":kotlin-lib"))
