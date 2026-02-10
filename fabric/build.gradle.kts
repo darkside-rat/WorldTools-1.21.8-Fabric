@@ -1,4 +1,5 @@
 plugins {
+    id("architectury-plugin")
     id("dev.architectury.loom")
     kotlin("jvm")
 }
@@ -6,6 +7,11 @@ plugins {
 repositories {
     maven("https://maven.fabricmc.net/")
     mavenCentral()
+}
+
+architectury {
+    platformSetupLoomIde()
+    fabric()
 }
 
 dependencies {

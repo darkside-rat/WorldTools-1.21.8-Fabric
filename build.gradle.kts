@@ -6,10 +6,6 @@ plugins {
     kotlin("jvm") version "2.0.21" apply false
 }
 
-architectury {
-    minecraft = property("minecraft_version").toString()
-}
-
 subprojects {
     apply(plugin = "java")
 
