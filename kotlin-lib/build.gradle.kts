@@ -1,5 +1,4 @@
 plugins {
-    id("net.fabricmc.loom")
     kotlin("jvm")
 }
 
