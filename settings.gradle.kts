@@ -7,7 +7,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "WorldTools"
-
-include("kotlin-lib")
-include("fabric")
+rootProject.name = "WorldTools-1.21.8-Fabric"
