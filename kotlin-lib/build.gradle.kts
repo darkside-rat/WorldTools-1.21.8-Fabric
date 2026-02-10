@@ -16,7 +16,7 @@ dependencies {
 
     modImplementation("net.fabricmc.fabric-api:fabric-api:${rootProject.property("cloth_config_version")}")
     modImplementation("net.fabricmc:fabric-loader:${rootProject.property("fabric_loader_version")}")
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${rootProject.property("fabric_api_version")}")
+    //modImplementation("net.fabricmc.fabric-api:fabric-api:${rootProject.property("fabric_api_version")}")
     
     implementation(kotlin("stdlib"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
