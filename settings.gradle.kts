@@ -1,3 +1,5 @@
+rootProject.name = "WorldTools-1.21.8-Fabric"
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -7,4 +9,5 @@ pluginManagement {
     }
 }
 
-rootProject.name = "WorldTools-1.21.8-Fabric"
+include("fabric")
+include("kotlin-lib")
