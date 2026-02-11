@@ -17,9 +17,13 @@ architectury {
 dependencies {
     minecraft("com.mojang:minecraft:${property("minecraft_version")}")
     mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
-    modImplementation("net.fabricmc:fabric-loader:0.16.9")
-    modImplementation("net.fabricmc:fabric-language-kotlin:1.13.9+kotlin.2.3.10")
-    implementation(project(":kotlin-lib"))
+    
+    modImplementation("net.fabricmc:fabric-loader:${project.properties["fabric_loader_version"]!!}")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${project.properties["fabric_api_version"]!!}")
+    modImplementation("net.fabricmc:fabric-language-kotlin:${project.properties["fabric_kotlin_version"]!!}")
+    modApi("me.shedaniel.cloth:cloth-config-fabric:${project.properties["cloth_config_version"]}")
+    modApi("maven.terraformersmc.com:modmenu:${project.properties["mod_menu_version"]}")
+
 }
 
 loom {
